@@ -1,5 +1,4 @@
-// const url = "https://scrapbook-api-rafael.herokuapp.com";
-const url = "http://localhost:8080";
+const url = "https://scrapbook-api-rafael.herokuapp.com";
 
 window.addEventListener("load", () => {
   axios.get(url + "/users").then((response) => {
