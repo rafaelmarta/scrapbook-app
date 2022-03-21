@@ -114,7 +114,7 @@ function createAccount() {
   } else {
     alert = `
     <div class="alert alert-primary" role="alert">
-      Cadastro realizado com sucesso! <a href="login.html">Retornar para tela de login</a>
+      Cadastro realizado com sucesso! <a href="index.html">Retornar para tela de login</a>
     </div>`;
     axios
       .post(url + "/register", {
@@ -132,7 +132,7 @@ function createAccount() {
 }
 
 function accountLogin() {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 function eyeClickLogin() {
