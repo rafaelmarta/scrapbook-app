@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+$primary: #6c63ff;
+$black: #000;
+$white: #fff;
+$body_color: #1282a2;
+$light: #d1d1d1;
+$font-family: "Poppins", sans-serif;
+
+body {
+  font-family: $font-family;
+  color: $black;
+  background-color: darken($body_color, 6%);
+  font-size: 15px;
+}
+
+.bg-img {
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+
+.inputs {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.inputs {
+  height: 40px !important;
+  border-radius: 10px !important;
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: $primary;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr:nth-of-type(odd) {
+  background: $primary;
+}
+table tr:nth-of-type(even) {
+  background: darken($primary, 4%);
+}
+
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+td,
+th {
+  padding: 18px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.btn-warning {
+  color: #0f253e;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td,
+  th {
+    text-align: left;
+  }
+
+  td:nth-of-type(1):before {
+    content: "#";
+  }
+  td:nth-of-type(2):before {
+    content: "Descrição";
+  }
+  td:nth-of-type(3):before {
+    content: "Detalhe";
+  }
+  td:nth-of-type(4):before {
+    content: "Ação";
+  }
+}
